@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User editing</title>
+    <meta charset="utf-8" />
+    <style>.field{width:180px;}</style>
+</head>
+<body>
+<div style="text-align: center; margin-top: 100px">
+    <h1>User editing</h1>
+    <form action="/edit" method="POST">
+        <input type="hidden" name="id" value="{{user.id}}" />
+        <label>Name</label><br>
+        <input name="name" value="{{user.name}}"  class="field" /><br><br>
+        <label>Age</label><br>
+        <input name="age" type="number" min="1" max="110" value="{{user.age}}"  class="field" /><br><br>
+        <input type="submit" value="Send" />
+    </form>
+    <a href="/">To the list of users</a>
+</div>
+</body>
+<html>
